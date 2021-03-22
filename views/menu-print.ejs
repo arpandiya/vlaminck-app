@@ -1,0 +1,72 @@
+<link rel='stylesheet' href='/stylesheets/menu-print.css' />
+    <div class="main__container" id="app">
+        <div class="menu__container">
+            <div class="menu__header">
+               <div class="menu__page">
+                   <select name="cat" id="">
+                   <% disCat.forEach((cat)=> { %>
+                        <option value="<%=cat.category%>"><%=cat.category%></option>
+                  <% })%>
+                   </select>
+                   
+                   <img src='/images/logo.png' width='180' height='90' />
+            </div>
+                <div class="menu__logo">
+                    <h1>Vlaminck'14</h1>
+                    <img src='/images/menu.png' height='100' width='230'/>
+                    
+                </div>
+                
+                <div class="menu__flags">
+                    <img width='50' height="30" src='/images/flag1.jpg'/>
+                    <img width='50' height="30" src='/images/flag2.jpg'/>
+                    <img width='50' height="30" src='/images/flag3.jpg'/>
+                </div>
+            </div>
+    <!-- category -->
+    <div class="menu__category">
+        <hr>
+        <h2>Lunch</h2>
+        <hr>
+    </div>
+<!-- Menu contents -->
+    <% menuItem.forEach((item) => { %>
+        
+    <% if(item.category === 'Drinks') { %>
+            <div class="menu__box">
+                <div class="menu__title">
+                    <!-- <h2>{{ items.item }}</h2>
+                    <hr> -->
+                <div class="menu__description">
+                    <div class="description__nl">
+                       <p><img src='/images/flag1.jpg' width='20' height='10'/> <%=item.menu_bl %></p> 
+                    </div>
+                    <hr style='opacity: 0.2;'>
+                    <div class="description__fr">
+                        <p><img src='/images/flag2.jpg' width='20' height='10'/> <%=item.menu_fr %></p>
+                    </div>
+                    <hr style='opacity: 0.2;'>
+                    <div class="description__en">
+                        <p><img src='/images/flag3.jpg' width='20' height='10'/> <%= item.menu_en %></p>
+                    </div>
+                </div>
+            </div>
+                <div class="menu__price">
+                    <h2>€ <%= item.price %></h2>
+                    
+                </div>
+                
+            </div>
+            <% }%>
+            <% }) %>
+            
+            <footer>
+               
+                
+            </footer>
+            <!-- End of menu box -->
+            
+        </div>
+
+        
+    </div>

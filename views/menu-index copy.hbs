@@ -1,0 +1,47 @@
+<link rel='stylesheet' href='/stylesheets/menu-index.css' />
+
+
+<div class="container">
+    <hr>
+        <div class="menu__filter">
+            {{#each disCat}}
+            
+            <button class='menu__filter__btn'>{{this.category}}</button>
+            
+            {{/each}}
+        </div>
+        <hr>
+        <div class="menu__category">
+            <h2>Lunch</h2>
+        </div>
+    <div class="menu__container">
+
+                {{#each menuItem}}
+                
+                 <div class="menu__block">
+                  <div class="menu__description">
+                    <div class="description__nl">
+                       <p><img src='/images/flag1.jpg' width='20' height='10'/> {{this.menu_bl}}</p> 
+                    </div>
+                    <hr style='opacity: 0.2;'>
+                    <div class="description__fr">
+                        <p><img src='/images/flag2.jpg' width='20' height='10'/> {{this.menu_fr}}</p>
+                    </div>
+                    <hr style='opacity: 0.2;'>
+                    <div class="description__en">
+                        <p><img src='/images/flag3.jpg' width='20' height='10'/> {{this.menu_en}}</p>
+                    </div>
+                </div>
+            <div class="menu__price">
+                <h2>€ {{this.price}}</h2>
+            </div>
+            </div>
+                
+        
+            
+                 {{/each}}
+    </div>
+</div>
+
+
+

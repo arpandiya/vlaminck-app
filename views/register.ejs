@@ -1,0 +1,12 @@
+<link rel='stylesheet' href='/stylesheets/login.css' />
+
+<form action='/admin/register' method='POST' class='form__post'>
+
+<h2>Sign Up !</h2>
+    <p>{{message}}</p>
+    <input type='text' name='first_name' class='form__control' placeholder="Enter First Name" required/>
+    <input type='text' name='last_name' class='form__control' placeholder="Enter Last Name" required/>
+    <input type='text' name='email' class='form__control' placeholder="Enter Email" required/>
+    <input type='password' name='password' class='form__control' placeholder="Enter Password" required/>
+    <input type='submit' class='form__submit' value='Register' />
+</form>

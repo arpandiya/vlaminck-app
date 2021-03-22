@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+.container {
+    margin-top: -36px;
+    background-color: rgba(255, 136, 0, 0.45);
+    border-top: 40px solid rgba(255, 136, 0, 0.45);
+    
+}
+
+.menu__filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 85%;
+    min-height: 60px;
+    height: 10vh;
+    margin: auto auto;
+    align-content: space-around;
+    
+}
+
+.menu__filter__btn {
+    width: 130px;
+    min-height: 35px;
+    background-color:rgba(255, 136, 0, 0.9);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.menu__category {
+    display: flex;
+    flex-wrap: wrap;
+    width: 15%;
+    min-width: 100px;
+    justify-content: center;
+    border-bottom: 2px solid rgb(36, 32, 32);
+    border-top: 2px solid rgb(36, 32, 32);
+    padding: 10px;
+    margin: 30px auto;
+    border-radius: 20px;
+}
+
+.menu__category > h2 {
+    font-size: 1.5em;
+    color:rgb(255, 136, 0);
+    
+}
+
+
+
+.menu__container {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-column-gap: 28px;
+    justify-content: center;
+           
+}
+
+.menu__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+background-color: rgb(255, 136, 0);
+margin: 15px 5px;
+padding: 20px;
+box-shadow: 2px 3px 4px black;
+border-radius: 20px 20px;
+
+max-width: 110%;
+}
+
+.menu__price {
+    
+    background-color: rgb(255, 136, 0);
+    height: inherit;
+    margin: 10px 10px 20px 5px ;
+    padding: 20px;
+    min-width: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 3px 4px black;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.menu__description, .menu__price {
+    font-size: 1.2em;
+    letter-spacing: 0.02em;
+    line-height: 1.6em;
+    color:rgb(10, 8, 8)
+}
+
+.menu__buttons {
+    padding: 10px;
+    margin: 15px;
+}
+
+.menu__buttons > button {
+    background-color:rgb(255, 159, 49);
+    margin: 5px;
+}
+
+.menu__buttons > button > a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(82, 56, 0);
+    
+}
+
+hr {
+    margin: 5px;
+}
+
+@media screen and (max-width: 990px){
+    .menu__container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-column-gap: 28px;
+        width: 90vw;
+        place-content: center;
+        margin-left: 1.7em;
+    }
+}

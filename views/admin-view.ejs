@@ -1,0 +1,35 @@
+<link rel='stylesheet' href='/stylesheets/admin-view.css' />
+
+<div class="admin__container">
+    <div class="admin__header">
+        <h2>Admin Dashboard</h2>
+        <hr>
+    </div>
+
+    <div class="admin__table__container">
+        <table>
+            <tr>
+                <th>S.N</th>
+                <th>Menu Belgium</th>
+                <th>Menu French</th>
+                <th>Menu English</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+{{#each menuItems}}
+            <tr class='table__data'>
+                <td>{{this.id}}</td>
+                <td>{{this.menu_bl}}</td>
+                <td>{{this.menu_fr}}</td>
+                <td>{{this.menu_en}}</td>
+                <td>{{this.price}}</td>
+                <td>
+                   <a href="menu/edit/">Edit</a>
+                   <a href="menu/delete/:id">Delete</a>
+                </td>
+            </tr>
+            
+            {{/each}}
+        </table>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+* , 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+.form__post {
+    display: flex;
+    margin: auto auto;
+    width: 50vw;
+    flex-direction: column;
+    height: auto;
+    min-height: 500px;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.form__post > h2 {
+    color: rgb(23, 105, 23);
+    text-align: center;
+}
+
+.form__control {
+    padding: 15px;
+    border: 1px solid green;
+    
+    
+}
+
+.form__submit {
+    background-color: green;
+    height: 60px;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 5px 4px 5px gray;
+    
+}

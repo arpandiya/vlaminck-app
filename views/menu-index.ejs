@@ -1,0 +1,58 @@
+<%- include('header')%>
+<link rel='stylesheet' href='/stylesheets/menu-index.css' />
+
+
+<div class="container">
+    <div class="btn__container">
+        <hr>
+        <div class="menu__filter">
+            <% disCat.forEach((cat) => { %>
+                <button class='menu__filter__btn'> <a href='#section__<%=cat.category%>'><%- cat.category %></a></button>
+                
+                <% }) %>
+                
+        </div>
+        <hr>
+    </div>
+    
+        <% disCat.forEach((cat) => { %>
+            <div id="section__<%= cat.category %>">
+            <div class="menu__category"> 
+            <h2> <%- cat.category %></h2>
+            </div>
+        
+        <!-- <div class="menu__category">            
+            <h2>Lunch</h2>            
+        </div>    -->
+        
+        <div class="menu__container">
+            <% menuItem.filter((item) => { %>
+            <% if(item.category === cat.category){ %>
+                 <div class="menu__block">
+                  <div class="menu__description">
+                    <div class="description__nl">
+                       <p><img src='/images/flag1.jpg' width='20' height='10'/> <%- item.menu_bl %> </p> 
+                    </div>
+                    <hr style='opacity: 0.2;'>
+                    <div class="description__fr">
+                        <p><img src='/images/flag2.jpg' width='20' height='10'/> <%- item.menu_fr %></p>
+                    </div>
+                    <hr style='opacity: 0.2;'>
+                    <div class="description__en">
+                        <p><img src='/images/flag3.jpg' width='20' height='10'/> <%- item.menu_en %></p>
+                    </div>
+                </div>
+            <div class="menu__price">
+                <h2>€ <%- item.price %></h2>
+            </div>
+            </div>
+            <% } %>
+            <% }) %> 
+     </div>
+    </div>
+<!-- SECOND ITEM -->
+<% }) %>
+</div>
+
+
+<%- include('footer') %>

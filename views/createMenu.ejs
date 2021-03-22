@@ -1,0 +1,13 @@
+ <link rel='stylesheet' href='/stylesheets/menu-create.css' />
+
+<form action='/menu/create' method='POST' class='form__post'>
+<hr>
+<h2>Add New Menu Item</h2>
+<hr>
+    <input type='text' name='category' class='form__control' placeholder="Enter Category" required/>
+    <textarea col='120' row='150' class='form__control' name='menu_bl' placeholder='Enter Belgian Menu' required></textarea>
+    <textarea col='10' row='20' class='form__control' name='menu_fr' placeholder='Enter French Menu' required></textarea>
+    <textarea col='10' row='20' class='form__control' name='menu_en' placeholder='Enter English Menu'required ></textarea>
+    <input type='text' class='form__control' name='price' placeholder='Enter Price' required/>
+    <input type='submit' class='form__submit' value='Create New Menu' />
+</form>
