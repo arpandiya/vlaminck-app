@@ -1,19 +1,51 @@
-<%- include('header')%>
+<%- include('header1')%>
 
 <link rel='stylesheet' href='/stylesheets/home.css' />
 
 <div class="container__slider">
     <div class="container__inner">
         
-        <div class="slider__text">
+        <!-- <div class="slider__text">
             <h1>Vlaminck'14</h1>
             <h2>Bistro-Grill and Restaurant</h2>
             
         </div>
+        --->
+       
         <div class="slider__image" id='slider__1'>
-            <img  class='image_slide' src='/images/slider1.jpg' width='1920' height='1020'/>
+            <img  class='image_slide' src='/images/slider2.jpg' alt='vlaminck slide image'/>
+        </div> 
+        <div class="rank__container">
+            <div class="rank__content">
+                <h5># 1 ranked at</h5>
+                <h4><img src='/images/review1.jpg' height='20' width='40' />  Trip Advisor</h2>
+            </div>
         </div>
-<div class="reviews">
+        <script>
+            const rankedAt = document.querySelector('.rank__content > h5');
+            const rankedBy = document.querySelector('.rank__content > h4');
+            const rankedOrg = ['Trip Advisor', 'Facebook', 'Google'];
+            const ranking = [1, 2, 3];
+
+            
+            setInterval(() => {
+                const randomNum = Math.floor(Math.random() * rankedOrg.length);
+                rankedBy.innerHTML = `${rankedOrg[randomNum]}`;
+                rankedAt.innerHTML = `# ${ranking[randomNum]} ranked at`;
+            const r = Math.floor(Math.random() * 255);
+            const g = Math.floor(Math.random() * 255);
+            const b = Math.floor(Math.random() * 255);
+            const color = `rgb(${r}, ${g}, ${b})`;
+            const color1 = `rgb(${b}, ${b}, ${g})`;
+                rankedBy.style.backgroundColor = `${color}`;
+                rankedAt.style.backgroundColor = `${color1}`;
+                rankedAt.style.color = `${color}`;
+                
+
+             }, 4000)
+
+        </script>
+<!-- <div class="reviews">
             <div class="reviews__card">
                <div class="reviews__content">
                    <h6><q><i>food and environment. Had a dinner with my family. The moment was awesome.</i></q>
@@ -25,17 +57,19 @@
                    <h5>trip Advisor</h5>
                </div>
             </div>   
-        </div>
+</div> -->
 
+<div class="text__container">
+    <div class="text__content">
+        <h2>Vlaminck'14</h2>
+        <h4>Bistro-Grill & Restaurant</h4>
+    </div>
+</div>
         <div class="button">
             <a href='/menu'><button>Order Now</button></a>
         </div>
 
-        <div class="flag__container">
-            <img src='/images/flag1.jpg' width='55' height='30' />
-            <img src='/images/flag2.jpg' width='55' height='30' />
-            <img src='/images/flag3.jpg' width='55' height='30' />
-        </div>
+        
 
     </div>
 </div>
